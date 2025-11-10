@@ -21,10 +21,7 @@ export const CartSlice = createSlice({
     },
     removeItem: (state, action) => {
       state.items = state.items.filter(item => item.name !== action.payload.name);
-
-
-      console.log("CartSlice Remove item " + JSON.stringify(action.payload));
-
+      //console.log("CartSlice Remove item " + JSON.stringify(action.payload));
 
     },
     updateQuantity: (state, action) => {

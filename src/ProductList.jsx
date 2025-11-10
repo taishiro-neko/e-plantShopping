@@ -302,7 +302,7 @@ function ProductList({ onHomeClick }) {
                         </h1>
                         <div className="product-list"> {/* Container for the list of plant cards */}
                           {category.plants.map((plant, plantIndex) => { // Loop through each plant in the current category
-                            
+                            const inCart = cartItems.some(i => i.name === plant.name);
                                 
                              return ( 
                             <div className="product-card" key={plantIndex}> {/* Unique key for each plant card */}
@@ -318,14 +318,13 @@ function ProductList({ onHomeClick }) {
 
                               <div className="product-cost">{plant.cost}</div> {/* Display plant cost */}
 
-                        <button
-                          className={`product-button ${cartItems.some(i => i.name === plant.name) ? "added-to-cart" : ""}`}
-                          disabled={cartItems.some(i => i.name === plant.name)}
-                          onClick={() => handleAddToCart(plant)}
-                        >
-                          {cartItems.some(i => i.name === plant.name) ? "Added to Cart" : "Add to Cart"}
-                        </button>
-
+                              <button
+                                className={`product-button ${inCart ? "added-to-cart" : ""}`}
+                                disabled={inCart}
+                                onClick={() => { if (!inCart) handleAddToCart(plant); }}
+                              >
+                                {inCart ? "Added to Cart" : "Add to Cart"}
+                              </button>
 
 
                             </div>

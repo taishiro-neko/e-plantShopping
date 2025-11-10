@@ -145,3 +145,53 @@
     width: 90%; /* Adjust as needed */
   }
 }
+
+
+
+
+
+/* === Responsive landing fixes === */
+
+/* 1) Undo the global clipping */
+* { overflow: visible; }
+
+/* 2) Let the flex container breathe and not offset oddly */
+.content {
+  position: relative;
+  min-height: 100vh;       /* was fixed height; min-height plays nicer */
+  width: 100%;
+  padding: 24px;           /* keep text from hugging the edges */
+  top: 0;                  /* remove the phantom top shift */
+  gap: 24px;               /* a bit more space between columns */
+  box-sizing: border-box;
+}
+
+/* 3) Stop shoving the left block off-screen */
+.landing_content {
+  margin: 0;               /* remove margin-left/margin-top */
+  transform: none;         /* remove the translate(-50%, -50%) */
+  width: auto;             /* drop fixed 400px box */
+  max-width: 600px;        /* cap on wide screens */
+  padding: 16px;           /* comfy padding */
+  box-sizing: border-box;
+}
+
+/* 4) Make the heading wrap instead of getting cut */
+.landing_content h1 {
+  font-size: clamp(28px, 5vw, 48px);
+  line-height: 1.1;
+  overflow-wrap: anywhere; /* wrap long words if needed */
+  word-break: break-word;
+}
+
+/* 5) Keep AboutUs responsive alongside it */
+.aboutus_container {
+  max-width: 700px;
+  width: 100%;
+}
+
+/* 6) On small screens, stack cleanly */
+@media (max-width: 900px) {
+  .content { flex-direction: column; align-items: stretch; }
+  .landing_content, .aboutus_container { max-width: 100%; }
+}

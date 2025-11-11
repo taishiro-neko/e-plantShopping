@@ -34,19 +34,19 @@ function ProductList({ onHomeClick }) {
             plants: [
                 {
                     name: "Snake Plant",
-                    image: "https://cdn.pixabay.com/photo/2021/01/22/06/04/snake-plant-5939187_1280.jpg",
+                    image: "1.jpg",
                     description: "Produces oxygen at night, improving air quality.",
                     cost: "$15"
                 },
                 {
                     name: "Spider Plant",
-                    image: "https://cdn.pixabay.com/photo/2018/07/11/06/47/chlorophytum-3530413_1280.jpg",
+                    image: "2.jpg",
                     description: "Filters formaldehyde and xylene from the air.",
                     cost: "$12"
                 },
                 {
                     name: "Peace Lily",
-                    image: "https://cdn.pixabay.com/photo/2019/06/12/14/14/peace-lilies-4269365_1280.jpg",
+                    image: "3.jpg",
                     description: "Removes mold spores and purifies the air.",
                     cost: "$18"
                 },
@@ -338,12 +338,14 @@ function ProductList({ onHomeClick }) {
                         <div className="product-list"> {/* Container for the list of plant cards */}
                           {category.plants.map((plant, plantIndex) => { // Loop through each plant in the current category
                             const inCart = cartItems.some(i => i.name === plant.name);
-                                
+                            // to support local images
+                            const imgSrc = new URL(`./assets/${plant.image}`, import.meta.url).href;
+
                              return ( 
                             <div className="product-card" key={plantIndex}> {/* Unique key for each plant card */}
                               <img 
                                 className="product-image" 
-                                src={plant.image} // Display the plant image
+                                src={imgSrc} // Display the plant image
                                 alt={plant.name} // Alt text for accessibility
                               />
                               <div className="product-title">{plant.name}</div> {/* Display plant name */}

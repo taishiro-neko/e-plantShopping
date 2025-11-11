@@ -35,31 +35,31 @@ function ProductList({ onHomeClick }) {
         plants: [
           {
             name: "Lullaby Lotus",
-            image: "0.jpg",
+            image: "Lotus.png",
             description: "Hushes mental chatter; drift into velvet-quiet dreams.",
             cost: "$22",
           },
           {
-            name: "Hush-Ivy",
-            image: "0.jpg",
+            name: "Repose Reed",
+            image: "Reed.png",
             description: "Wraps the mind in gentle stillness, goodbye 3 a.m. overthinking.",
             cost: "$14",
           },
           {
             name: "Moonmoss Pillow",
-            image: "0.jpg",
+            image: "Moonmoss.png",
             description: "Soft-focus haze, zero stress, maximum cozy.",
             cost: "$19",
           },
           {
-            name: "Serenity Camellia",
-            image: "0.jpg",
+            name: "Calm Camellia",
+            image: "Camellia.png",
             description: "Melts tension; warm tea ambience for deep calm.",
             cost: "$16",
           },
           {
             name: "Drowsy Bluebell",
-            image: "0.jpg",
+            image: "Bluebell.png",
             description: "Slow waves and steady REM anchor.",
             cost: "$12",
           },
@@ -69,33 +69,33 @@ function ProductList({ onHomeClick }) {
         category: "Starburst Wilderness Vines",
         plants: [
           {
-            name: "Comet Creeper",
-            image: "0.jpg",
-            description: "Hitch stardust trails for fast, cosmic fun.",
+            name: "Star Spike",
+            image: "StarSpike.png",
+            description: "Opens lightning-fast routes across the cosmos.",
             cost: "$21",
           },
           {
             name: "Rift Runner Vine",
-            image: "0.jpg",
-            description: "Doorway buds into new biomes every night.",
+            image: "Vine.png",
+            description: "Bursts into new biomes every night.",
             cost: "$18",
           },
           {
-            name: "Thunder Fern",
-            image: "0.jpg",
-            description: "Storm-trail safaris with safe exhilaration.",
+            name: "Portal Poppy",
+            image: "0.png",
+            description: "Unlocks gateways between realities, one seed at a time.",
             cost: "$15",
           },
           {
-            name: "Cindertrail Briar",
-            image: "0.jpg",
-            description: "Lava-rim hikes, dragon-friendly difficulty.",
+            name: "Lava Agave",
+            image: "0.png",
+            description: "Forges fiery trails across volcanic dreamscapes.",
             cost: "$24",
           },
           {
-            name: "Aurora Briarvine",
-            image: "0.jpg",
-            description: "Polar skies and crystalline caverns, no map required.",
+            name: "Wayfarer Bamboo",
+            image: "0.png",
+            description: "Unrolls roadways for endless roaming.",
             cost: "$17",
           },
         ],
@@ -105,33 +105,33 @@ function ProductList({ onHomeClick }) {
         plants: [
           {
             name: "Echo Orchid",
-            image: "0.jpg",
-            description: "Crystal-clear voices, names, places: gentle recall.",
+            image: "0.png",
+            description: "Calls familiar voices back into your dreaming rooms.",
             cost: "$20",
           },
           {
             name: "Keepsake Peony",
-            image: "0.jpg",
-            description: "Revisit treasured scenes with richer detail.",
+            image: "0.png",
+            description: "Repaints treasured scenes with richer detail.",
             cost: "$13",
           },
           {
-            name: "Remnant Rose",
-            image: "0.jpg",
-            description: "Scent-triggered pathways to long-lost moments.",
+            name: "Hourglass Rose",
+            image: "0.png",
+            description: "Turns time gently, revisiting what once was.",
             cost: "$23",
           },
           {
-            name: "Hearth-Marigold",
-            image: "0.jpg",
-            description: "Warm kitchens, laughter loops, family dinners.",
+            name: "Hearth Marigold",
+            image: "Marigold.png",
+            description: "Warms old family rooms and rekindles shared laughter.",
             cost: "$16",
           },
           {
-            name: "Photograph Anemone",
-            image: "0.jpg",
-            description: "Still frames you can step back into.",
-            cost: "$11",
+            name: "Chrysanthemum of Remembrance",
+            image: "0.png",
+            description: "Opens dream-paths to meet your lost loved ones.",
+            cost: "$21",
           },
         ],
       },
@@ -140,31 +140,31 @@ function ProductList({ onHomeClick }) {
         plants: [
           {
             name: "Spark Snapdragon",
-            image: "0.jpg",
+            image: "0.png",
             description: "Rapid idea branching; sketchbook goes feral.",
             cost: "$25",
           },
           {
             name: "Inkcap Chrysanthemum",
-            image: "0.jpg",
+            image: "0.png",
             description: "Narrative threads weave themselves.",
             cost: "$15",
           },
           {
             name: "Chorus Clover",
-            image: "0.jpg",
+            image: "0.png",
             description: "Melody seedlings: hums become hooks.",
             cost: "$12",
           },
           {
             name: "Blueprint Hyacinth",
-            image: "0.jpg",
+            image: "0.png",
             description: "Clean architecture for wild concepts.",
             cost: "$18",
           },
           {
             name: "Nebula Nasturtium",
-            image: "0.jpg",
+            image: "0.png",
             description: "Color palettes piped in from deep space.",
             cost: "$24",
           },
@@ -216,12 +216,14 @@ function ProductList({ onHomeClick }) {
         e.preventDefault();
         setShowCart(false);
     };
+
+    const imgSrcLogo = new URL(`./assets/0.png`, import.meta.url).href;
     return (
         <div>
             <div className="navbar" style={styleObj}>
                 <div className="tag">
                     <div className="luxury">
-                        <img src="https://cdn.pixabay.com/photo/2020/08/05/13/12/eco-5465432_1280.png" alt="" />
+                        <img src={imgSrcLogo} alt="logo" />
                         <a href="/" onClick={(e) => handleHomeClick(e)}>
                             <div>
                                 <h3 style={{ color: 'white' }}>Somniware Flora</h3>

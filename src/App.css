@@ -1,4 +1,5 @@
-/* LandingPage.css */
+/* App.css - Dream Plant Shop Edition 💫🌌 */
+
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +11,7 @@
   position: relative;
   width: 100vw;
   height: 100vh;
-  background-color: #f8f8f8;
+  background: linear-gradient(135deg, #1a0933 0%, #2d1b4e 50%, #4a2d6e 100%);
 }
 
 .background-image {
@@ -22,27 +23,27 @@
   background-image: url('https://cdn.pixabay.com/photo/2017/07/13/08/59/greenhouse-2499758_1280.jpg');
   background-size: 100% 100%;
   background-position: center;
-  filter: brightness(0.8);
+  filter: brightness(0.4) hue-rotate(200deg) saturate(1.5);
 }
+
 .content {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
   width: 100vw;
- top: 100px;
-  backdrop-filter: blur(4px);
-  background-color: rgba(0,0,0,0.5);
+  top: 100px;
+  backdrop-filter: blur(8px);
+  background: linear-gradient(135deg, rgba(26, 9, 51, 0.7) 0%, rgba(74, 45, 110, 0.6) 100%);
   gap: 20px;
 }
 
 .landing_content {
- margin-top: 430px;
+  margin-top: 430px;
   margin-left: 100px;
   transform: translate(-50%, -50%);
   z-index: 1;
   text-align: center;
-  /* background-color: red; */
   width: 400px;
   height: 400px;
   display: flex;
@@ -54,7 +55,8 @@
 
 .content p,
 .content h1 {
-  color: white;
+  color: #e8dff5;
+  text-shadow: 0 0 20px rgba(182, 125, 255, 0.5);
 }
 
 .content h1 {
@@ -69,8 +71,9 @@
 .divider {
   width: 50px;
   height: 2px;
-  background-color: #4caf50;
+  background: linear-gradient(90deg, #8a63d2 0%, #b87dff 100%);
   margin: 10px 0;
+  box-shadow: 0 0 10px rgba(182, 125, 255, 0.8);
 }
 
 .get-started-button {
@@ -78,15 +81,18 @@
   font-size: 23px;
   border: none;
   border-radius: 5px;
-  background-color: #4caf50;
+  background: linear-gradient(135deg, #8a63d2 0%, #6b4a99 100%);
   color: white;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
   margin-top: 40px;
+  box-shadow: 0 6px 20px rgba(138, 99, 210, 0.6);
 }
 
 .get-started-button:hover {
-  background-color: #45a049;
+  background: linear-gradient(135deg, #9a73e2 0%, #7b5aa9 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(182, 125, 255, 0.8);
 }
 
 /* ProductList.css */
@@ -95,25 +101,22 @@
   position: absolute;
   overflow-x: hidden;
   top: 100vh;
-  /* Initially off-screen */
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: rgba(255, 255, 255, 0.9);
-  /* Adjust background opacity as needed */
+  background: linear-gradient(135deg, #f8f5ff 0%, #ede5ff 100%);
   transition: top 0.5s ease;
-  /* Smooth transition for top property */
   overflow-y: auto;
-  /* Enable vertical scrolling */
   z-index: 2;
-  /* Ensure it's above landing page content */
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
 }
 
 .product-list-container.visible {
   top: 0;
 }
-/* LandingPage.css */
+
+/* Responsive fixes */
+
 @media screen and (max-width: 768px) {
   .content {
     flex-direction: column;
@@ -123,75 +126,72 @@
   }
 
   .landing_content {
-    margin-top: 100px; /* Adjust as needed */
+    margin-top: 100px;
     margin-left: 0;
-    width: 80%; /* Adjust as needed */
+    width: 80%;
     text-align: center;
   }
 
   .aboutus_container {
-    margin-top: 20px; /* Adjust as needed */
-    width: 80%; /* Adjust as needed */
+    margin-top: 20px;
+    width: 80%;
   }
 }
 
 @media screen and (max-width: 480px) {
   .landing_content {
-    margin-top: 50px; /* Adjust as needed */
-    width: 90%; /* Adjust as needed */
+    margin-top: 50px;
+    width: 90%;
   }
 
   .aboutus_container {
-    width: 90%; /* Adjust as needed */
+    width: 90%;
   }
 }
 
+/* Better responsive behavior */
 
+* { 
+  overflow: visible; 
+}
 
-
-
-/* === Responsive landing fixes === */
-
-/* 1) Undo the global clipping */
-* { overflow: visible; }
-
-/* 2) Let the flex container breathe and not offset oddly */
 .content {
   position: relative;
-  min-height: 100vh;       /* was fixed height; min-height plays nicer */
+  min-height: 100vh;
   width: 100%;
-  padding: 24px;           /* keep text from hugging the edges */
-  top: 0;                  /* remove the phantom top shift */
-  gap: 24px;               /* a bit more space between columns */
+  padding: 24px;
+  top: 0;
+  gap: 24px;
   box-sizing: border-box;
 }
 
-/* 3) Stop shoving the left block off-screen */
 .landing_content {
-  margin: 0;               /* remove margin-left/margin-top */
-  transform: none;         /* remove the translate(-50%, -50%) */
-  width: auto;             /* drop fixed 400px box */
-  max-width: 600px;        /* cap on wide screens */
-  padding: 16px;           /* comfy padding */
+  margin: 0;
+  transform: none;
+  width: auto;
+  max-width: 600px;
+  padding: 16px;
   box-sizing: border-box;
 }
 
-/* 4) Make the heading wrap instead of getting cut */
 .landing_content h1 {
   font-size: clamp(28px, 5vw, 48px);
   line-height: 1.1;
-  overflow-wrap: anywhere; /* wrap long words if needed */
+  overflow-wrap: anywhere;
   word-break: break-word;
 }
 
-/* 5) Keep AboutUs responsive alongside it */
 .aboutus_container {
   max-width: 700px;
   width: 100%;
 }
 
-/* 6) On small screens, stack cleanly */
 @media (max-width: 900px) {
-  .content { flex-direction: column; align-items: stretch; }
-  .landing_content, .aboutus_container { max-width: 100%; }
+  .content { 
+    flex-direction: column; 
+    align-items: stretch; 
+  }
+  .landing_content, .aboutus_container { 
+    max-width: 100%; 
+  }
 }

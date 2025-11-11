@@ -1,35 +1,47 @@
-  .about-us-container {
-    max-width: 1000px;  
-    width: 100%;     
-    margin: 0 auto;  
-    padding: 16px;      
-    box-sizing: border-box;
-    text-align: left;   
-    overflow-wrap: anywhere; 
-  }
+/* AboutUs.css - Dream Plant Shop Edition 🌙✨ */
 
-  .about-us-heading {
-    font-size: 32px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  .about-us-description {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 30px;
-    text-align: center;
-  }
-  
-  .about-us-content {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-  .plant_logo_right{
-    text-align: right;
-  }
+.about-us-container {
+  max-width: 1000px;  
+  width: 100%;     
+  margin: 0 auto;  
+  padding: 16px;      
+  box-sizing: border-box;
+  text-align: left;   
+  overflow-wrap: anywhere;
+  background: linear-gradient(135deg, rgba(107, 74, 153, 0.3) 0%, rgba(138, 99, 210, 0.4) 100%);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(138, 99, 210, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(184, 125, 255, 0.3);
+}
 
-  .plant_logo_left{
-    text-align: left;
-  }
+.about-us-heading {
+  font-size: 32px;
+  font-weight: bold;
+  color: #1a0933;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgba(184, 125, 255, 0.4);
+}
+
+.about-us-description {
+  font-size: 18px;
+  color: #2d1b4e;
+  margin-bottom: 30px;
+  text-align: center;
+  text-shadow: 1px 1px 4px rgba(184, 125, 255, 0.3);
+}
+
+.about-us-content {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #2d1b4e;
+  text-shadow: 1px 1px 4px rgba(184, 125, 255, 0.2);
+}
+
+.plant_logo_right {
+  text-align: right;
+}
+
+.plant_logo_left {
+  text-align: left;
+}

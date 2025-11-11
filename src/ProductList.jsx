@@ -141,19 +141,19 @@ function ProductList({ onHomeClick }) {
           {
             name: "Spark Snapdragon",
             image: "0.png",
-            description: "Rapid idea branching; sketchbook goes feral.",
+            description: "Ignites quick idea bursts and fans them into concepts.",
             cost: "$25",
           },
           {
-            name: "Inkcap Chrysanthemum",
+            name: "Inky Iris",
             image: "0.png",
-            description: "Narrative threads weave themselves.",
+            description: "Braids ideas, themes, and imagery into a clear draft.",
             cost: "$15",
           },
           {
             name: "Chorus Clover",
             image: "0.png",
-            description: "Melody seedlings: hums become hooks.",
+            description: "Weaves stray notes and motifs into blooming melodies.",
             cost: "$12",
           },
           {

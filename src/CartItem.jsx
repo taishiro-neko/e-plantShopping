@@ -55,9 +55,11 @@ const CartItem = ({ onContinueShopping }) => {
         Total Cart Amount ({itemCount} {itemCount === 1 ? 'item' : 'items'}): ${calculateTotalAmount()}
       </h2>
       <div>
-        {cart.map(item => (
+        {cart.map(item => {
+          const imgSrc = new URL(`./assets/${item.image}`, import.meta.url).href;
+          return (
           <div className="cart-item" key={item.name}>
-            <img className="cart-item-image" src={item.image} alt={item.name} />
+            <img className="cart-item-image" src={imgSrc} alt={item.name} />
             <div className="cart-item-details">
               <div className="cart-item-name">{item.name}</div>
               <div className="cart-item-cost">{item.cost}</div>
@@ -70,7 +72,8 @@ const CartItem = ({ onContinueShopping }) => {
               <button className="cart-item-delete" onClick={() => handleRemove(item)}>Delete</button>
             </div>
           </div>
-        ))}
+        );
+        })}
       </div>
       <div style={{ marginTop: '20px', color: 'black' }} className='total_cart_amount'></div>
       <div className="continue_shopping_btn">

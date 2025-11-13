@@ -3,3 +3,5 @@
 This is an assignment for Coursera: __Developing Front-End Apps with React__ by IBM. Based on Paradise Nursery Shopping Application, creatively reimagined to have a bit more fun with it.
 
 Product images created by me playing around with Procreate Pocket.
+
+Here is the site: https://taishiro-neko.github.io/e-plantShopping/

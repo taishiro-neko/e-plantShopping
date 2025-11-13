@@ -109,7 +109,7 @@ html, body, #root {
 /* ProductList.css */
 
 .product-list-container {
-  position: absolute;
+  position: fixed;
   overflow-x: hidden;
   top: 100vh;
   left: 0;
@@ -118,7 +118,7 @@ html, body, #root {
   background: linear-gradient(135deg, #f8f5ff 0%, #ede5ff 100%);
   transition: top 0.5s ease;
   overflow-y: auto;
-  z-index: 2;
+  z-index: 10;
   backdrop-filter: blur(10px);
 }
 

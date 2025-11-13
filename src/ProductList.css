@@ -216,6 +216,9 @@ body {
   display: flex;
 }
 
+.category-name {
+  color: white;
+}
 
 .plantname_heading {
   display: flex;

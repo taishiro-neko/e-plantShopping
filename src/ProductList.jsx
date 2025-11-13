@@ -173,28 +173,33 @@ function ProductList({ onHomeClick }) {
     ];
 
 
-
-
     const styleObj = {
-        backgroundColor: '#4CAF50',
-        color: '#fff!important',
-        padding: '15px',
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignIems: 'center',
-        fontSize: '20px',
-    }
+      backgroundColor: '#4CAF50',
+      color: '#fff',
+      padding: '12px 16px',
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      gap: '12px',
+      fontSize: '20px',
+      flexWrap: 'nowrap',
+    };
+
     const styleObjUl = {
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        width: '1100px',
-    }
+      display: 'flex',
+      alignItems: 'center',
+      gap: '16px',
+      flexShrink: 0,
+    };
+
     const styleA = {
-        color: 'white',
-        fontSize: '30px',
-        textDecoration: 'none',
-    }
+      color: 'white',
+      fontSize: 'clamp(18px, 4vw, 24px)',
+      textDecoration: 'none',
+      whiteSpace: 'nowrap',
+    };
+
+
 
     const handleHomeClick = (e) => {
         e.preventDefault();
@@ -237,13 +242,15 @@ function ProductList({ onHomeClick }) {
                     <div> <a href="#" onClick={(e) => handleCartClick(e)} style={styleA}>
 
                         <h1 className="cart" style={{ position: "relative" }}>
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 256 256"
-                            height="68"
-                            width="68"
-                            aria-hidden="true"
-                          >
+                          
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 256 256"
+                              height="48"
+                              width="48"
+                              aria-hidden="true"
+                            >
+
                             <rect width="156" height="156" fill="none"></rect>
                             <circle cx="80" cy="216" r="12"></circle>
                             <circle cx="184" cy="216" r="12"></circle>

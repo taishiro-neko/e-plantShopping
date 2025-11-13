@@ -234,29 +234,48 @@ body {
   }
 }
 
+
+
 @media (max-width: 768px) {
   .product-card {
     flex: 1 1 calc(50% - 20px);
     max-width: calc(50% - 20px);
   }
-  
+
   .navbar {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    padding-inline: 12px;
+    gap: 8px;
   }
 
   .tag {
-    margin-bottom: 20px;
-    text-align: center;
+    margin-bottom: 0;
+    text-align: left;
   }
 
+  /* optional, but keeps nav compact if you ever use .ul */
   .ul {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: row;
+    gap: 12px;
   }
 
   .ul div {
     text-align: center;
   }
+
+  .cart_quantity_count {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-left: 18px;
+  }
+
+ .luxury {
+    width: auto;
+    max-width: 65%;
+    font-size: 16px;
+  }
+
 }
+

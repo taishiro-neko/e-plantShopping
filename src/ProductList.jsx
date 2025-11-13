@@ -29,14 +29,14 @@ function ProductList({ onHomeClick }) {
     };    
 
 
-    const plantsArray = [
+   const plantsArray = [
       {
         category: "Moonpetal Sedatives",
         plants: [
           {
             name: "Lullaby Lotus",
             image: "Lotus.png",
-            description: "Hushes mental chatter; drift into velvet-quiet dreams.",
+            description: "Hushes mental chatter and summons velvet-quiet dreams.",
             cost: "$22",
           },
           {
@@ -48,7 +48,7 @@ function ProductList({ onHomeClick }) {
           {
             name: "Moonmoss Pillow",
             image: "Moonmoss.png",
-            description: "Soft-focus haze, zero stress, maximum cozy.",
+            description: "Cushions worries and cradles you in serene dreams.",
             cost: "$19",
           },
           {
@@ -60,7 +60,7 @@ function ProductList({ onHomeClick }) {
           {
             name: "Drowsy Bluebell",
             image: "Bluebell.png",
-            description: "Slow waves and steady REM anchor.",
+            description: "Drifts you onto gentle waves of sleep and deepens REM. ",
             cost: "$12",
           },
         ],
@@ -82,19 +82,19 @@ function ProductList({ onHomeClick }) {
           },
           {
             name: "Portal Poppy",
-            image: "0.png",
+            image: "Poppy.png",
             description: "Unlocks gateways between realities, one seed at a time.",
             cost: "$15",
           },
           {
             name: "Lava Agave",
-            image: "0.png",
+            image: "Agawe.png",
             description: "Forges fiery trails across volcanic dreamscapes.",
             cost: "$24",
           },
           {
             name: "Wayfarer Bamboo",
-            image: "0.png",
+            image: "Bamboo.png",
             description: "Unrolls roadways for endless roaming.",
             cost: "$17",
           },
@@ -105,19 +105,19 @@ function ProductList({ onHomeClick }) {
         plants: [
           {
             name: "Echo Orchid",
-            image: "0.png",
+            image: "Orchid.png",
             description: "Calls familiar voices back into your dreaming rooms.",
             cost: "$20",
           },
           {
             name: "Keepsake Peony",
-            image: "0.png",
+            image: "Peony.png",
             description: "Repaints treasured scenes with richer detail.",
             cost: "$13",
           },
           {
             name: "Hourglass Rose",
-            image: "0.png",
+            image: "Rose.png",
             description: "Turns time gently, revisiting what once was.",
             cost: "$23",
           },
@@ -128,8 +128,8 @@ function ProductList({ onHomeClick }) {
             cost: "$16",
           },
           {
-            name: "Chrysanthemum of Remembrance",
-            image: "0.png",
+            name: "Chrysanthemum Key",
+            image: "Chrysanthemum.png",
             description: "Opens dream-paths to meet your lost loved ones.",
             cost: "$21",
           },
@@ -140,38 +140,37 @@ function ProductList({ onHomeClick }) {
         plants: [
           {
             name: "Spark Snapdragon",
-            image: "0.png",
-            description: "Ignites quick idea bursts and fans them into concepts.",
+            image: "Snapdragon.png",
+            description: "Scatters sparks that coalesce into ideas.",
             cost: "$25",
           },
           {
             name: "Inky Iris",
-            image: "0.png",
+            image: "Iris.png",
             description: "Braids ideas, themes, and imagery into a clear draft.",
             cost: "$15",
           },
           {
             name: "Chorus Clover",
-            image: "0.png",
+            image: "Clover.png",
             description: "Weaves stray notes and motifs into blooming melodies.",
             cost: "$12",
           },
           {
-            name: "Blueprint Hyacinth",
-            image: "0.png",
-            description: "Clean architecture for wild concepts.",
+            name: "Coding Cactus",
+            image: "Cactus.png",
+            description: "Branches concepts, compiles sketches, and refactors chaos into patterns. ",
             cost: "$18",
           },
           {
-            name: "Nebula Nasturtium",
-            image: "0.png",
-            description: "Color palettes piped in from deep space.",
+            name: "Lucid Robusta",
+            image: "Robusta.png",
+            description: "Clarifies foggy thoughts and snaps them into focus. ",
             cost: "$24",
           },
         ],
       },
     ];
-
 
 
 

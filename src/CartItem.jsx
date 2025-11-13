@@ -23,7 +23,7 @@ const CartItem = ({ onContinueShopping }) => {
   };
 
   const handleCheckoutShopping = (e) => {
-    alert('Not implemented yet, maybe someday...');
+    alert("Checkout coming soon!\nin your dreams...");
   };
 
   const handleIncrement = (item) => {

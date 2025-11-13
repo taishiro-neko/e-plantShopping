@@ -24,7 +24,7 @@ function AboutUs() {
     <p className="about-us-content">
     Whether you're a seasoned lucid dreamer or just beginning to explore your sleeping mind, 
     Somniware Flora is here to guide you. Browse our selection and discover which dream-plants 
-    resonate with your intentions. Sweet dreams are just a planting away. 🌙✨
+    resonate with your intentions. Sweet dreams are just a planting away.
     </p>
 
     </div>

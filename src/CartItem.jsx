@@ -51,7 +51,7 @@ const CartItem = ({ onContinueShopping }) => {
 
   return (
     <div className="cart-container">
-      <h2 style={{ color: 'black' }}>
+      <h2 style={{ color: 'white' }}>
         Total Cart Amount ({itemCount} {itemCount === 1 ? 'item' : 'items'}): ${calculateTotalAmount()}
       </h2>
       <div>

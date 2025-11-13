@@ -69,8 +69,15 @@ body {
 
 /* Product Card */
 .product-card {
-  flex: 0 0 calc(33.33% - 20px);
-  max-width: calc(26.33% - 20px);
+  /* layout stuff */
+  flex: 1 1 calc(33.33% - 20px);
+  max-width: calc(33.33% - 20px);
+  min-width: 220px; /* prevents the card from getting skinnier than the image */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* your original styling, unchanged */
   margin-bottom: 20px;
   padding: 20px;
   background: linear-gradient(135deg, #ffffff 0%, #f8f5ff 100%);
@@ -82,6 +89,15 @@ body {
   box-shadow: 0 4px 12px rgba(138, 99, 210, 0.2);
   transition: all 0.3s ease;
 }
+
+.product-card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;   /* keeps aspect ratio; crops if needed */
+  display: block;
+  margin-bottom: 12px;
+}
+
 
 /* Hover effect on product card */
 .product-card:hover {
@@ -200,13 +216,6 @@ body {
   display: flex;
 }
 
-.cart_quantity_count {
-  margin-top: 16px;
-  margin-left: 27px;
-  position: absolute;
-  font-size: 29px;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-}
 
 .plantname_heading {
   display: flex;
@@ -225,6 +234,35 @@ body {
   padding: 10px;
   font-weight: bold;
 }
+
+
+.cart-icon-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* make sure the svg itself isn't adding weird line-height gaps */
+.cart-icon-wrapper svg {
+  display: block;
+}
+
+/* base style – centered inside the cart icon for desktop AND mobile */
+.cart_quantity_count {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 2px 4px;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  pointer-events: none;
+}
+
+
 
 /* Responsive adjustments */
 @media (max-width: 1200px) {
@@ -265,11 +303,7 @@ body {
     text-align: center;
   }
 
-  .cart_quantity_count {
-    font-size: 18px;
-    margin-top: 10px;
-    margin-left: 18px;
-  }
+  
 
  .luxury {
     width: auto;
@@ -279,3 +313,10 @@ body {
 
 }
 
+.product-page,
+.cart-page {
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding-bottom: 40px;      /* so content can breathe above bottom */
+  background: #100022;       /* match your main background / gradient base */
+}

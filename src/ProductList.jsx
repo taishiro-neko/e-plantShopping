@@ -223,7 +223,7 @@ function ProductList({ onHomeClick }) {
 
     const imgSrcLogo = new URL(`./assets/0.png`, import.meta.url).href;
     return (
-        <div>
+        <div className="product-page">
             <div className="navbar" style={styleObj}>
                 <div className="tag">
                     <div className="luxury">
@@ -242,7 +242,7 @@ function ProductList({ onHomeClick }) {
                     <div> <a href="#" onClick={(e) => handleCartClick(e)} style={styleA}>
 
                         <h1 className="cart" style={{ position: "relative" }}>
-                          
+                          <div className="cart-icon-wrapper">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               viewBox="0 0 256 256"
@@ -264,9 +264,11 @@ function ProductList({ onHomeClick }) {
                             />
                           </svg>
 
-                          <span className="cart_quantity_count" aria-live="polite">
+                          <div className="cart_quantity_count">
                             {cartCount}
-                          </span>
+                          </div>
+                         </div>
+
                         </h1>
 
 

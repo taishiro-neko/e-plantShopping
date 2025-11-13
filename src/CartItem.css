@@ -3,13 +3,16 @@
 .cart-item {
   display: flex;
   border-bottom: 1px solid #b8a9d8;
-  padding: 10px 0;
+  padding: 10px 20px;       /* was: 10px 0 → now has left/right padding 🎉 */
   background: linear-gradient(135deg, #f8f5ff 0%, #f0ebff 100%);
-  width: 500px;
+  width: 100%;              /* stretch within container */
+  max-width: 500px;         /* same “visual” width you had before */
+  box-sizing: border-box;   /* so padding doesn’t make it overflow */
   gap: 30px;
   border-radius: 8px;
   margin-bottom: 10px;
 }
+
 
 .cart-item-image {
   width: 200px;
